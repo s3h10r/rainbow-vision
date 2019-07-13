@@ -4,26 +4,41 @@ literature
 - [RGB Image Analysis with Python](http://marksolters.com/programming/2015/02/27/rgb-histograph.html)
 - [The incredibly challenging task of sorting colours](https://www.alanzucconi.com/2015/09/30/colour-sorting/)
 
-installation
-------------
+installation into a seperated python3 virtualenv (linux)
+--------------------------------------------------------
 
-installing the software into a seperated virtual-environment under linux can
-be done like:
+Clone repository and changing into its directory
 
 ```console
-
-foo@bar:~$ git clone https://github.com/s3h10r/rainbow-vision/tree/feature
+foo@bar:~$ git clone https://github.com/s3h10r/rainbow-vision/tree/lab
 foo@bar:~$ cd rainbow-vision
-foo@bar:~$ python3 -m venv venv_rv # --- create a venv
-foo@bar:~$ source venv_rv/bin/activate # --- activate venv
-(venv_rv) foo@bar:~$ pip install -r requirements.txt # --- install dependencies into it
+```
 
-# --- yai, ready now...
+Create a virtualenv (here named `venv_rv`)
 
+```console
+foo@bar:~$ python3 -m venv venv_rv
+```
+
+Change into the previously created venv `venv_rv` by activating it
+and install the dependencies via pip into it afterwards:
+
+```console
+foo@bar:~$ source venv_rv/bin/activate
+(venv_rv) foo@bar:~$ pip install -r requirements.txt
+```
+
+No errors? YAI then, ready now :)
+
+```console
 (venv_rv) foo@bar:~$ ./visualize_color.py  
 (venv_rv) foo@bar:~$
+```
 
-# --- don't forget to leave the venv when you're done
+PS: Don't forget to leave the venv when you're done.
+
+```console
 (venv_rv) foo@bar:~$ deactivate
+
 foo@bar:~$
 ```
